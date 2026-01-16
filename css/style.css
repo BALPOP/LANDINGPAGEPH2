@@ -60,21 +60,23 @@ body {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     padding: var(--spacing-sm);
-}
-
-.app-container {
-    width: 100%;
-    max-width: 400px;
-    min-height: 100%;
-    
     /* Futuristic Gradient: Deep Space Purple to Neon Yellow */
     background: linear-gradient(to bottom, 
         var(--popvai-purple-dark) 0%, 
         var(--popvai-purple) 50%, 
         var(--popvai-yellow) 100%);
+}
+
+.app-container {
+    width: 100%;
+    max-width: 400px;
+    min-height: auto;
+    
+    background: transparent;
         
     border-radius: var(--radius-lg);
     /* Neon Glow Shadow around the phone */
@@ -95,6 +97,7 @@ body {
         padding: 0;
         min-height: auto;
         align-items: flex-start;
+        border-radius: 0;
     }
     .app-container {
         max-width: 100%;
@@ -787,15 +790,16 @@ body {
 /* ===== RTP IFRAME SECTION ===== */
 .rtp-section {
     width: 100%;
-    max-width: 520px;
+    max-width: 400px;
     padding: var(--spacing-md);
     margin: 0 auto;
+    background: transparent;
 }
 
 .rtp-iframe-container {
     border-radius: 12px;
     overflow: hidden;
-    background: #0a0a14;
+    background: transparent;
     border: 2px solid var(--gold);
     box-shadow: 
         0 0 25px rgba(212, 175, 55, 0.2), 
@@ -880,6 +884,7 @@ body {
     
     .rtp-section {
         padding: var(--spacing-sm);
+        max-width: 100%;
     }
     
     .rtp-iframe {

@@ -366,6 +366,7 @@ body {
     /* Glass Container Dimensions */
     padding: 0.9rem 2rem;
     border-radius: 50px;
+    animation: button-pulse 2s ease-in-out infinite;
     
     /* Rich Gold Bar Background with Metallic Gradient */
     background: linear-gradient(135deg, 
@@ -463,6 +464,7 @@ body {
         inset 0 -2px 20px rgba(139, 69, 19, 0.4);
     border-color: #FFD700;
     filter: brightness(1.2);
+    animation: none;
 }
 
 /* Secondary Shine Layer for Extra Sparkle */
@@ -571,6 +573,9 @@ body {
     color: white;
     transition: all 0.3s ease;
     height: 42px;
+    animation: button-pulse 2s ease-in-out infinite;
+    animation-delay: 0s;
+    position: relative;
 }
 
 .contact-btn img {
@@ -589,6 +594,17 @@ body {
 .contact-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+/* Social Buttons Container */
+.social-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 12px;
+    height: 42px;
 }
 
 /* Canal Button */
@@ -596,24 +612,63 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     width: 100%;
-    padding: 16px;
+    padding: 0px;
     background: linear-gradient(135deg, var(--primary), #ff6f00);
     border-radius: 14px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: white;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
-    margin-bottom: var(--spacing-xs);
+    height: 42px;
+    animation: button-pulse 2s ease-in-out infinite;
+    animation-delay: 0s;
+    position: relative;
 }
 
 .canal-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(168, 85, 247, 0.3);
+    animation: none;
+}
+
+/* Instagram Button */
+.instagram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0px;
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45);
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    height: 42px;
+    animation: button-pulse 2s ease-in-out infinite;
+    animation-delay: 0s;
+    position: relative;
+}
+
+.instagram-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.instagram-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(131, 58, 180, 0.3);
+    animation: none;
 }
 
 /* Partnership Container */
@@ -687,14 +742,20 @@ body {
     border: 2px solid rgba(123, 44, 191, 0.5);
     position: relative;
     overflow: hidden;
-    animation: button-pulse 3s infinite;
+    animation: button-pulse 2s ease-in-out infinite;
     width: 80%;
 }
 
+/* Clickable Button Animation */
 @keyframes button-pulse {
-    0% { box-shadow: 0 0 15px rgba(123, 44, 191, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2); border-color: rgba(123, 44, 191, 0.5); }
-    50% { box-shadow: 0 0 25px rgba(123, 44, 191, 0.8), 0 0 0 2px rgba(255, 255, 255, 0.4); border-color: rgba(123, 44, 191, 0.8); }
-    100% { box-shadow: 0 0 15px rgba(123, 44, 191, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2); border-color: rgba(123, 44, 191, 0.5); }
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0);
+    }
 }
 
 .btn-primary::before {
@@ -712,6 +773,7 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 15px 30px rgba(123, 44, 191, 0.5);
     border-color: rgba(255, 214, 10, 0.5);
+    animation: none;
 }
 
 .btn-primary:hover::before {
@@ -802,8 +864,18 @@ body {
     }
     
     .canal-btn {
-        padding: 14px;
+        padding: 0px;
         font-size: 12px;
+    }
+    
+    .instagram-btn {
+        padding: 0px;
+        font-size: 12px;
+    }
+    
+    .instagram-btn svg {
+        width: 18px;
+        height: 18px;
     }
     
     .rtp-section {

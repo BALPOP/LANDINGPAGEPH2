@@ -799,15 +799,6 @@ body {
     margin-top: 0;
 }
 
-.footer-text {
-    font-size: 0.9rem;
-    color: #2d0a4e; 
-    font-weight: 600;
-    margin-bottom: 0;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .contact-action {
     display: flex;
@@ -886,7 +877,7 @@ body {
     width: 100%;
     max-width: 400px;
     padding: var(--spacing-md);
-    margin: 0 auto;
+    margin: 10px auto 0;
     background: transparent;
 }
 
@@ -976,9 +967,15 @@ body {
         height: 18px;
     }
     
+    .app-main {
+        padding-bottom: 0;
+    }
+    
     .rtp-section {
         padding: var(--spacing-sm);
+        padding-top: 0;
         max-width: 100%;
+        margin-top: 0;
     }
     
     .rtp-iframe {
